@@ -1,4 +1,4 @@
-dev-libs/cmark 0.25.2: CommonMark parsing and rendering library and program in C
+dev-libs/cmark 0.25.2 0.26.1: CommonMark parsing and rendering library and program in C
 dev-perl/CommonMark 0.240100: Interface to the CommonMark C library
 dev-perl/HTML-Escape 1.10: Extremely fast HTML escaping
 dev-perl/Module-Build-Pluggable 0.10: Module::Build meets plugins
