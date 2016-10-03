@@ -9,12 +9,10 @@ HOMEPAGE="https://github.com/jgm/cmark"
 SRC_URI="https://github.com/jgm/cmark/archive/${PV}.tar.gz"
 
 LICENSE="BSD-2"
-SLOT="0"
+SLOT="0/26.1"
 KEYWORDS="amd64 x86"
 
-DEPEND="
-dev-util/cmake
-"
+DEPEND="dev-util/cmake"
 
 src_compile() {
 	emake INSTALL_PREFIX="/usr/" || die "emake failed"
