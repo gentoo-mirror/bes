@@ -9,7 +9,7 @@ HOMEPAGE="https://github.com/jgm/cmark"
 SRC_URI="https://github.com/jgm/cmark/archive/${PV}.tar.gz"
 
 LICENSE="BSD-2"
-SLOT="0/25.2"
+SLOT="0/27.1"
 KEYWORDS="amd64 x86"
 
 DEPEND="dev-util/cmake"
