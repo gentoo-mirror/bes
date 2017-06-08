@@ -1,6 +1,1 @@
-dev-libs/cmark 0.26.1-r1 0.27.1: CommonMark parsing and rendering library and program in C
-dev-perl/CommonMark 0.240100-r1: Interface to the CommonMark C library
-dev-perl/HTML-Escape 1.10: Extremely fast HTML escaping
-dev-perl/Module-Build-Pluggable 0.10: Module::Build meets plugins
-dev-perl/Module-Build-Pluggable-PPPort 0.04: Generate ppport.h
-dev-perl/URI-Escape-XS 0.14: URI::Escape::XS - Drop-In replacement for URI::Escape
+dev-libs/cmark 0.27.1: CommonMark parsing and rendering library and program in C
