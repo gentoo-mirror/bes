@@ -9,7 +9,4 @@ Install layman, if you didn't already, add the overlay:
 
 ## Atoms
 
-- #### dev-libs/cmark
-	CommonMark parsing/rendering library and program in C
-
-	`cat README.md |cmark`
+-
