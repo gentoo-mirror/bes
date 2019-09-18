@@ -2,7 +2,7 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-command="/opt/softether/bin/vpnbridge/vpnbridge"
+command="/usr/bin/vpnbridge"
 command_args="start"
 description="SoftEther VPN Bridge"
 name="SoftEther VPN Bridge"

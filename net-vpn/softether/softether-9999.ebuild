@@ -3,10 +3,10 @@
 
 EAPI=7
 
-EGIT_REPO_URI="git://github.com/SoftEtherVPN/SoftEtherVPN_Stable.git"
-EGIT_BRANCH="master"
+EGIT_REPO_URI="git://github.com/SoftEtherVPN/SoftEtherVPN.git"
+#EGIT_COMMIT="5.01.9671"
 
-inherit git-r3 systemd toolchain-funcs
+inherit git-r3 systemd
 
 DESCRIPTION="Multi-protocol VPN software"
 HOMEPAGE="http://www.softether.org/"
@@ -15,70 +15,40 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64"
-IUSE="bridge client cmd debug libressl server"
-REQUIRED_USE="|| ( bridge client cmd server )"
+IUSE="debug libressl"
 
 RDEPEND="sys-libs/ncurses:0=
 	 sys-libs/readline:0=
-	 sys-libs/zlib
 	 !libressl? ( dev-libs/openssl:0= )
 	 libressl? ( dev-libs/libressl:0= )
+         virtual/libiconv
         "
 DEPEND="${RDEPEND}
         app-text/dos2unix
        "
 
-DOCS=( AUTHORS.TXT ChangeLog README )
-
-PATCHES=( "${FILESDIR}"/softether-4.30-sandbox.patch
-	"${FILESDIR}"/softether-4.25-compile-flags.patch )
+#PATCHES=( "${FILESDIR}"/softether-5.01-sandbox.patch )
 
 src_prepare() {
-        dos2unix "src/Mayaqua/Unix.c"
+ dos2unix "src/Mayaqua/Unix.c"
+ default
+}
 
-	default
 
-	sed -i '/opt\/vpn/s|/opt|/opt/softether|' systemd/*.service \
-		|| die "sed failed for systemd files"
-
-	rm -f configure || die
-	if use amd64; then
-		cp src/makefiles/linux_64bit.mak Makefile \
-			|| die "copy Makefile for amd64 failed"
-	elif use x86; then
-		cp src/makefiles/linux_32bit.mak Makefile \
-			|| die "copy Makefile for x86 failed"
-	fi
+src_configure() {
+ CMAKE_INSTALL_PREFIX="/usr" econf
 }
 
 src_compile() {
-	tc-export CC AR RANLIB
-	emake DEBUG="$(usex debug YES NO '' '')"
+ emake -C tmp
 }
 
 src_install() {
-	einstalldocs
+ emake DESTDIR="${D}" -C tmp install
 
-	# Define local variable, strip 'debug' and 'libressl' USE flags
-	local MODULES
-	MODULES="${IUSE//debug}"
-	MODULES="${IUSE//libressl}"
-
-	# Define installation location
-	insinto /opt/softether
-	doins src/bin/BuiltHamcoreFiles/unix/hamcore.se2
-
-	# Install binary in accordance to used USE flags
-	for module in ${MODULES}; do
-		if use "$module" ; then
-			dosym ../../hamcore.se2 /opt/softether/bin/vpn"$module"/hamcore.se2
-			insinto /opt/softether/bin/vpn"$module"
-			doins bin/vpn"$module"/vpn"$module"
-			fperms 0755 /opt/softether/bin/vpn"$module"/vpn"$module"
-			if [ "$module" != "cmd" ] ; then
-				newinitd "${FILESDIR}"/"${PN}"-"$module".initd "${PN}"-"$module"
-				systemd_newunit "systemd/${PN}-vpn$module.service" "${PN}"-"$module".service
-			fi
-		fi
-	done
+MODULES=(server client bridge cmd)
+ for module in ${MODULES}; do
+  newinitd "${FILESDIR}"/"${PN}"-"$module".initd "${PN}"-"$module"
+  systemd_newunit "systemd/${PN}-vpn$module.service" "${PN}"-"$module".service
+ done
 }
