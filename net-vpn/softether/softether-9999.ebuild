@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
         app-text/dos2unix
        "
 
-#PATCHES=( "${FILESDIR}"/softether-5.01-sandbox.patch )
+PATCHES=( "${FILESDIR}"/softether-sandbox.patch )
 
 src_prepare() {
  dos2unix "src/Mayaqua/Unix.c"
