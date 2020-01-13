@@ -9,5 +9,5 @@ Install layman, if you didn't already, add the overlay:
 
 ## Atoms
 
-- SoftEther VPN
+- SoftEther VPN server
 
