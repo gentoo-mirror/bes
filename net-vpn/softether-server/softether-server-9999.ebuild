@@ -46,9 +46,6 @@ src_compile() {
 src_install() {
  emake DESTDIR="${D}" -C tmp install
 
-MODULES=(server client bridge cmd)
- for module in ${MODULES}; do
-  newinitd "${FILESDIR}"/"${PN}"-"$module".initd "${PN}"-"$module"
-  systemd_newunit "systemd/${PN}-vpn$module.service" "${PN}"-"$module".service
- done
+ newinitd "${FILESDIR}"/softether-server.initd softether-server
+ systemd_newunit "systemd/softether-vpnserver.service" softether-server.service
 }
