@@ -10,4 +10,5 @@ Install layman, if you didn't already, add the overlay:
 ## Atoms
 
 - SoftEther VPN server
+- Airsonic media server
 
