@@ -6,7 +6,7 @@ EAPI=7
 EGIT_REPO_URI="git://github.com/SoftEtherVPN/SoftEtherVPN.git"
 #EGIT_COMMIT="5.01.9671"
 
-inherit git-r3 systemd
+inherit git-r3 systemd eutils
 
 DESCRIPTION="Multi-protocol VPN software"
 HOMEPAGE="http://www.softether.org/"
@@ -23,14 +23,12 @@ RDEPEND="sys-libs/ncurses:0=
 	 libressl? ( dev-libs/libressl:0= )
          virtual/libiconv
         "
-DEPEND="${RDEPEND}
-        app-text/dos2unix
-       "
+DEPEND="${RDEPEND}"
 
 PATCHES=( "${FILESDIR}"/softether-sandbox.patch )
 
 src_prepare() {
- dos2unix "src/Mayaqua/Unix.c"
+ edos2unix "src/Mayaqua/Unix.c"
  default
 }
 
