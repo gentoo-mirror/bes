@@ -1,1 +1,4 @@
+acct-group/airsonic 0: Group for Arisonic
+acct-user/airsonic 0: User for Airsonic
+media-sound/airsonic-bin 10.6.1: Subsonic is a personal media server, opensource fork of Subsonic
 net-vpn/softether-server 9999: Multi-protocol VPN software
