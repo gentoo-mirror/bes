@@ -11,4 +11,5 @@ Install layman, if you didn't already, add the overlay:
 
 - SoftEther VPN server
 - Airsonic media server
+- Subsonic media server
 
