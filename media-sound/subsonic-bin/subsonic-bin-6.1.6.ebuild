@@ -3,8 +3,6 @@
 
 EAPI=7
 
-inherit eutils
-
 MY_PN="${PN//-bin}"
 
 DESCRIPTION="Subsonic is a complete, personal media streaming solution"
