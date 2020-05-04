@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${MY_PN}/${PV}/${MY_PN}-${PV}-standalone.tar.gz"
 LICENSE=""
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ffmpeg lame selinux"
+IUSE="+ffmpeg +lame selinux"
 
 DEPEND=""
 RDEPEND="
