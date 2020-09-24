@@ -3,13 +3,15 @@
 
 EAPI=7
 
+inherit eutils
+
 MY_PN="${PN//-bin}"
 
 DESCRIPTION="Subsonic is a complete, personal media streaming solution"
 HOMEPAGE="http://www.subsonic.org/"
 SRC_URI="mirror://sourceforge/${MY_PN}/${PV}/${MY_PN}-${PV}-standalone.tar.gz"
 
-LICENSE=""
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+ffmpeg +lame selinux"
