@@ -6,4 +6,3 @@ net-vpn/softether-server:bridge - Enable install of SoftEther VPN bridge
 net-vpn/softether-server:client - Enable install of SoftEther VPN client
 net-vpn/softether-server:cmd - Enable install of SoftEther VPN cmd
 net-vpn/softether-server:server - Enable install of SoftEther VPN server
-sys-kernel/gentoo-kernel-bin:initramfs - Build initramfs along with the kernel.
