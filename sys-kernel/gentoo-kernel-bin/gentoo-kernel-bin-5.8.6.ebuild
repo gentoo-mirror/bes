@@ -8,7 +8,7 @@ inherit kernel-install
 MY_P=${P/-bin/}-1
 DESCRIPTION="Pre-built Linux kernel with genpatches"
 HOMEPAGE="https://www.kernel.org/"
-SRC_URI="http://gentoo-overlay-bes-dist.xn--txe.net/gentoo-kernel-5.8.6-1.amd64.xpak"
+SRC_URI="https://gentoo-overlay-bes-dist.xn--txe.net/gentoo-kernel-5.8.6-1.amd64.xpak"
 S=${WORKDIR}
 
 LICENSE="GPL-2"
