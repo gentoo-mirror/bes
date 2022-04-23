@@ -5,6 +5,4 @@ acct-user/subsonic 0: User for Subsonic
 media-sound/airsonic-bin 10.6.1: Airsonic is a personal media server, opensource fork of Subsonic
 media-sound/subsonic-bin 6.1.6-r1: Subsonic is a complete, personal media streaming solution
 net-vpn/softether-server 9999: Multi-protocol VPN software
-sys-kernel/gentoo-kernel-bin 5.8.6 5.10.93: Pre-built Linux kernel with genpatches
-sys-kernel/linux-headers 5.8 5.10-r2: Linux system headers
 virtual/dist-kernel 5.10.93: Virtual to depend on any Distribution Kernel
