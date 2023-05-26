@@ -3,13 +3,21 @@ personal portage overlay
 
 ## Installing
 
-Install layman, if you didn't already, add the overlay:
+add the overlay to gentoo:
 
-`layman -a bes`
+```
+$ emerge app-eselect/eselect-repository
+$ eselect repository enable bes
+```
+
+update:
+
+```
+$ emaint sync -r bes
+```
 
 ## Atoms
 
-- SoftEther VPN server
-- Airsonic media server
-- Subsonic media server
+- SoftEther VPN server (stalled)
+
 
