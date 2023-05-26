@@ -1,9 +1,2 @@
-acct-group/airsonic 0: Group for Airsonic
-acct-group/subsonic 0: Group for Subsonic
-acct-user/airsonic 0: User for Airsonic
-acct-user/subsonic 0: User for Subsonic
-media-sound/airsonic-bin 10.6.1: Airsonic is a personal media server, opensource fork of Subsonic
-media-sound/subsonic-bin 6.1.6-r1: Subsonic is a complete, personal media streaming solution
 net-vpn/softether-server 9999: Multi-protocol VPN software
 sys-cluster/csync2 2.0-r2: Cluster synchronization tool
-virtual/dist-kernel 5.10.93: Virtual to depend on any Distribution Kernel
