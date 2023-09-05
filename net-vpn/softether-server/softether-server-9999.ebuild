@@ -1,12 +1,12 @@
 # Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-EGIT_REPO_URI="git://github.com/SoftEtherVPN/SoftEtherVPN.git"
+EGIT_REPO_URI="https://github.com/SoftEtherVPN/SoftEtherVPN.git"
 #EGIT_COMMIT="5.01.9671"
 
-inherit git-r3 systemd eutils
+inherit git-r3 systemd edos2unix
 
 DESCRIPTION="Multi-protocol VPN software"
 HOMEPAGE="http://www.softether.org/"
@@ -38,11 +38,11 @@ src_configure() {
 }
 
 src_compile() {
- emake -C tmp
+ emake -C build
 }
 
 src_install() {
- emake DESTDIR="${D}" -C tmp install
+ emake DESTDIR="${D}" -C build install
 
  newinitd "${FILESDIR}"/softether-server.initd softether-server
  systemd_newunit "systemd/softether-vpnserver.service" softether-server.service
