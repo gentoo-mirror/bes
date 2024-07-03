@@ -1,4 +1,5 @@
 # gentoo-overlay-bes
+
 personal portage overlay
 
 ## Installing
@@ -18,6 +19,8 @@ $ emaint sync -r bes
 
 ## Atoms
 
+- dev-db/percona-xtrabackup: fix #913649: proc/sysinfo.h: No such file
+- sys-cluster/csync2
 - SoftEther VPN server (stalled)
 
 
