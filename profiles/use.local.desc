@@ -2,7 +2,9 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
-net-vpn/softether-server:bridge - Enable install of SoftEther VPN bridge
-net-vpn/softether-server:client - Enable install of SoftEther VPN client
-net-vpn/softether-server:cmd - Enable install of SoftEther VPN cmd
-net-vpn/softether-server:server - Enable install of SoftEther VPN server
+sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin.
+sys-apps/busybox:math - Enable math support in gawk (requires libm)
+sys-apps/busybox:mdev - Create the appropriate symlink in /sbin and install mdev.conf and support files
+sys-apps/busybox:sep-usr - Support a separate /usr without needing an initramfs by booting with init=/ginit
+sys-apps/busybox:static - Make the system rescue shell (/bin/bb) static so you can recover even when glibc is broken
+sys-apps/busybox:systemd - Support systemd
