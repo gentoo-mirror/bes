@@ -22,6 +22,5 @@ $ emaint sync -r bes
 - sys-apps/busybox: extra use flag for all suppressed commands in base gentoo (beep, inetd, ipcalc, inotifyd, rfkill, ...)
 - dev-db/percona-xtrabackup: fix #913649: proc/sysinfo.h: No such file
 - sys-cluster/csync2
-- SoftEther VPN server (stalled)
 
 
