@@ -1,3 +1,2 @@
-dev-db/percona-xtrabackup 8.0.30.23-r1: Hot backup utility for MySQL based servers
 sys-apps/busybox 1.37.0: Utilities for rescue and embedded systems
 sys-cluster/csync2 2.0-r2: Cluster synchronization tool
